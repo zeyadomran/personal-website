@@ -4,7 +4,7 @@ import { Field, ID, ObjectType } from "type-graphql";
 @ObjectType({ description: "The Project Model." })
 @ModelOptions({ options: { allowMixed: 0 } })
 export class Project {
-	@Field(() => ID)
+	@Field(() => ID, { description: "The project's ID." })
 	id: string;
 
 	@Field({ description: "The title of the project." })
