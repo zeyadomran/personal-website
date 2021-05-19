@@ -8,8 +8,7 @@ import ProjectResolver from "./resolvers/ProjectResolver";
 require("dotenv").config({ path: path.join(__dirname, "../.env") });
 
 const main = async () => {
-	const port = process.env.PORT || 4000;
-
+	// Connecting to MongoDB
 	await mongoose
 		.connect(process.env.MONGO_URL!, {
 			useNewUrlParser: true,
@@ -17,21 +16,29 @@ const main = async () => {
 			useFindAndModify: false,
 			useUnifiedTopology: true,
 		})
-		.then(() => console.log("DB successfully connected! 🚀"));
+		.then(() => console.log("🚀 DB successfully connected!"));
 
+	// Creating instance of express server
 	const app = express();
 
-	const apolloServer = new ApolloServer({
-		schema: await buildSchema({
-			resolvers: [ProjectResolver],
-			validate: false,
-		}),
+	// Creating GraphQL Schema
+	const schema = await buildSchema({
+		resolvers: [ProjectResolver],
+		validate: false,
 	});
 
+	// Creating instance of Apollo Server
+	const apolloServer = new ApolloServer({
+		schema,
+	});
+
+	// Applying app as middleware to Apollo Server
 	apolloServer.applyMiddleware({ app });
 
-	app.listen(port, () =>
-		console.log(`Listening on https://localhost:${port}! 🚀`)
+	// Start Server
+	const port = process.env.PORT || 4000;
+	app.listen(Number(port), () =>
+		console.log(`🚀 Listening on https://localhost:${port}!`)
 	);
 };
 

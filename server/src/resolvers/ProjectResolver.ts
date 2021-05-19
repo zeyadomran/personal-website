@@ -7,8 +7,7 @@ class ProjectResolver {
 	@Query(() => [Project], {
 		description: "Gets all the projects in the database.",
 	})
-	async projects(@Arg("id", () => String, { nullable: true }) id?: string) {
-		if (id) return ProjectModel.findById(id);
+	async projects() {
 		return ProjectModel.find();
 	}
 

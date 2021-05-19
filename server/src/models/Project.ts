@@ -29,7 +29,7 @@ export class Project {
 	url?: string;
 
 	@Field({ description: "The year the project was completed." })
-	@Prop()
+	@Prop({ required: true })
 	completionDate: string;
 }
 
