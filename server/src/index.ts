@@ -4,6 +4,7 @@ import express from "express";
 import path from "path";
 import "reflect-metadata";
 import { buildSchema } from "type-graphql";
+import CertificateResolver from "./resolvers/CertificateResolver";
 import ProjectResolver from "./resolvers/ProjectResolver";
 require("dotenv").config({ path: path.join(__dirname, "../.env") });
 
@@ -23,7 +24,7 @@ const main = async () => {
 
 	// Creating GraphQL Schema
 	const schema = await buildSchema({
-		resolvers: [ProjectResolver],
+		resolvers: [ProjectResolver, CertificateResolver],
 		validate: false,
 	});
 
