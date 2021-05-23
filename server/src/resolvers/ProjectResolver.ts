@@ -1,4 +1,5 @@
-import { Arg, Mutation, Query, Resolver } from "type-graphql";
+import { Arg, Mutation, Query, Resolver, UseMiddleware } from "type-graphql";
+import { isAuth } from "../middleware/isAuth";
 import ProjectModel, { Project } from "../models/Project";
 import { AddProjectType, UpdateProjectType } from "../types/ProjectTypes";
 
@@ -8,20 +9,23 @@ class ProjectResolver {
 		description: "Gets all the projects in the database.",
 	})
 	async projects() {
-		return ProjectModel.find();
+		return ProjectModel.find().sort({ completionDate: -1 });
 	}
 
 	@Query(() => Project, { description: "Gets a project by its ID." })
+	@UseMiddleware(isAuth)
 	async project(@Arg("id", () => String) id: string) {
 		return ProjectModel.findById(id);
 	}
 
 	@Mutation(() => Project, { description: "Creates a new project." })
+	@UseMiddleware(isAuth)
 	async addProject(@Arg("data", () => AddProjectType) data: AddProjectType) {
 		return ProjectModel.create(data);
 	}
 
 	@Mutation(() => Boolean, { description: "Deletes a project by its ID." })
+	@UseMiddleware(isAuth)
 	async deleteProject(@Arg("id", () => String) id: string) {
 		await ProjectModel.deleteOne({ _id: id });
 		return true;
@@ -30,6 +34,7 @@ class ProjectResolver {
 	@Mutation(() => Project, {
 		description: "Updates a a specific project by its ID.",
 	})
+	@UseMiddleware(isAuth)
 	async updateProject(
 		@Arg("data", () => UpdateProjectType) data: UpdateProjectType
 	) {

@@ -1,5 +1,14 @@
-import { Arg, Ctx, Mutation, Query, Resolver } from "type-graphql";
 import bcrypt from "bcrypt";
+import {
+	Arg,
+	Ctx,
+	Mutation,
+	Query,
+	Resolver,
+	UseMiddleware,
+} from "type-graphql";
+import { COOKIE_NAME } from "../Constants";
+import { isAuth } from "../middleware/isAuth";
 import AdminModel, { Admin } from "../models/Admin";
 import { MyContext } from "../types/MyContext";
 
@@ -12,6 +21,7 @@ class AdminResolver {
 	}
 
 	@Mutation(() => Admin, { description: "Register an admin." })
+	@UseMiddleware(isAuth)
 	async registerAdmin(
 		@Arg("username") username: string,
 		@Arg("password") password: string,
@@ -36,6 +46,20 @@ class AdminResolver {
 
 		req.session.adminId = admin.id;
 		return admin;
+	}
+	@Mutation(() => Boolean, { description: "Logs out an admin." })
+	async logout(@Ctx() { req, res }: MyContext) {
+		return new Promise((resolve) =>
+			req.session.destroy((err) => {
+				res.clearCookie(COOKIE_NAME);
+				if (err) {
+					console.log(err);
+					resolve(false);
+					return;
+				}
+				resolve(true);
+			})
+		);
 	}
 }
 
