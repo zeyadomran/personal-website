@@ -1,4 +1,4 @@
-import { Button } from "@chakra-ui/react";
+import { Button, useColorModeValue } from "@chakra-ui/react";
 import NextLink from "next/link";
 import React from "react";
 
@@ -7,21 +7,23 @@ interface NavItemProps {
 	to: string;
 }
 
-const NavItem: React.FC<NavItemProps> = ({ children, to, ...rest }) => (
-	<NextLink href={to}>
-		<Button
-			textDecoration="none"
-			cursor="pointer"
-			bg="transparent"
-			fontWeight="bold"
-			fontFamily="Poppins"
-			px="2"
-			_hover={{ color: "cyan.500" }}
-			{...rest}
-		>
-			{children}
-		</Button>
-	</NextLink>
-);
+const NavItem: React.FC<NavItemProps> = ({ children, to, ...rest }) => {
+	return (
+		<NextLink href={to}>
+			<Button
+				textDecoration="none"
+				cursor="pointer"
+				bg="transparent"
+				fontWeight="bold"
+				fontFamily="Poppins"
+				px="2"
+				_hover={{ bg: `${useColorModeValue("white.200", "black.700")}` }}
+				{...rest}
+			>
+				{children}
+			</Button>
+		</NextLink>
+	);
+};
 
 export default NavItem;
