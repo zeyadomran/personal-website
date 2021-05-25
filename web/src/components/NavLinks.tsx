@@ -19,6 +19,7 @@ const NavLinks: React.FC<NavLinksProps> = ({ isOpen }) => {
 				direction={["column", "row", "row", "row"]}
 				pt={[4, 4, 0, 0]}
 			>
+				<NavItem to="/">Home</NavItem>
 				<NavItem to="/about">About</NavItem>
 				<NavItem to="/projects">Projects</NavItem>
 				<NavItem to="/contact" isLast>

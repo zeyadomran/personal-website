@@ -1,4 +1,3 @@
-import { Box } from "@chakra-ui/react";
 import React from "react";
 import Logo from "./Logo";
 import MenuToggle from "./MenuToggle";
@@ -11,15 +10,11 @@ const Navbar: React.FC = (props) => {
 	const toggle = () => setIsOpen(!isOpen);
 
 	return (
-		<nav>
-			<Box zIndex={1} position="sticky" top={0} /* shadow={"md"} */>
-				<NavBarContainer {...props}>
-					<Logo />
-					<MenuToggle toggle={toggle} isOpen={isOpen} />
-					<NavLinks isOpen={isOpen} />
-				</NavBarContainer>
-			</Box>
-		</nav>
+		<NavBarContainer {...props}>
+			<Logo />
+			<MenuToggle toggle={toggle} isOpen={isOpen} />
+			<NavLinks isOpen={isOpen} />
+		</NavBarContainer>
 	);
 };
 
