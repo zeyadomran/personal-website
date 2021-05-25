@@ -1,0 +1,22 @@
+import { Flex } from "@chakra-ui/react";
+import React from "react";
+
+const NavBarContainer: React.FC = ({ children, ...props }) => {
+	return (
+		<Flex
+			as="nav"
+			align="center"
+			justify="space-between"
+			wrap="wrap"
+			w={["90%", "85%", "80%", "70%"]}
+			mb={8}
+			mx="auto"
+			p={4}
+			{...props}
+		>
+			{children}
+		</Flex>
+	);
+};
+
+export default NavBarContainer;
