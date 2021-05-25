@@ -4,11 +4,10 @@ import React from "react";
 
 interface NavItemProps {
 	children?: React.ReactNode;
-	isLast?: boolean;
 	to: string;
 }
 
-const NavItem: React.FC<NavItemProps> = ({ children, isLast, to, ...rest }) => (
+const NavItem: React.FC<NavItemProps> = ({ children, to, ...rest }) => (
 	<NextLink href={to}>
 		<Button
 			textDecoration="none"
@@ -17,7 +16,7 @@ const NavItem: React.FC<NavItemProps> = ({ children, isLast, to, ...rest }) => (
 			fontWeight="bold"
 			fontFamily="Poppins"
 			px="2"
-			_hover={{ color: "red" }}
+			_hover={{ color: "cyan.500" }}
 			{...rest}
 		>
 			{children}
