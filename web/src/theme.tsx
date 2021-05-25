@@ -1,5 +1,7 @@
 import { ColorMode, extendTheme } from "@chakra-ui/react";
-import { createBreakpoints, mode } from "@chakra-ui/theme-tools";
+import { colors } from "./theme/colors";
+import { styles } from "./theme/styles";
+import { breakpoints } from "./theme/breakpoints";
 
 interface ChakraConfig {
 	initialColorMode: ColorMode;
@@ -7,38 +9,13 @@ interface ChakraConfig {
 }
 
 const config: ChakraConfig = {
-	initialColorMode: "dark",
+	initialColorMode: "light",
 	useSystemColorMode: false,
 };
 
-const fonts = { sans: "'Poppins', 'Roboto'" };
-
-const breakpoints = createBreakpoints({
-	sm: "40em",
-	md: "52em",
-	lg: "64em",
-	xl: "80em",
-});
-
-const colors = {
-	white: "#fafafa",
-	black: "#1e1e1e",
-	navy: "#022340",
-	blue: "#07598C",
-	green: "#027368",
-	cyan: "#A7D9D4",
-	red: "#F2360C",
-};
-
-const styles = {
-	global: (props: any) => ({
-		body: {
-			fontFamily: "body",
-			color: mode("black", "white")(props),
-			bg: mode("white", "black")(props),
-			lineHeight: "base",
-		},
-	}),
+const fonts = {
+	heading: "Poppins",
+	body: "Roboto",
 };
 
 const theme = extendTheme({
