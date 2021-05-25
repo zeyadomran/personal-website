@@ -3,17 +3,17 @@ import Head from "next/head";
 import React from "react";
 import Navbar from "../components/Navbar";
 
-const About: React.FC = () => {
+const Contact: React.FC = () => {
 	const { colorMode, toggleColorMode } = useColorMode();
 
 	return (
 		<>
 			<Head>
-				<title>Zeyad Omran - About</title>
+				<title>Zeyad Omran - Contact</title>
 			</Head>
 			<main>
 				<Navbar />
-				About
+				Contact
 				<button onClick={() => toggleColorMode()}>
 					<img src={`/images/favicon/favicon-${colorMode}-32x32.png`} />
 				</button>
@@ -22,4 +22,4 @@ const About: React.FC = () => {
 	);
 };
 
-export default About;
+export default Contact;

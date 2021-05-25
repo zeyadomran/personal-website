@@ -15,9 +15,9 @@ const MenuToggle: React.FC<MenuToggleProps> = ({ toggle, isOpen }) => {
 			cursor="pointer"
 		>
 			{isOpen ? (
-				<CloseIcon w="22px" height="22px" />
+				<CloseIcon w="22px" h="22px" />
 			) : (
-				<HamburgerIcon w="30px" height="30px" />
+				<HamburgerIcon w="30px" h="30px" />
 			)}
 		</Box>
 	);

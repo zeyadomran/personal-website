@@ -4,9 +4,6 @@ import React from "react";
 const NavBarContainer: React.FC = ({ children, ...props }) => {
 	return (
 		<Flex
-			zIndex={1}
-			position="sticky"
-			top={0}
 			as="nav"
 			align="center"
 			justify="space-between"

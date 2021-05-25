@@ -1,4 +1,4 @@
-import { Box, useColorMode, Text, Flex } from "@chakra-ui/react";
+import { Box, useColorMode, Text, Flex, Icon } from "@chakra-ui/react";
 import React from "react";
 import Link from "next/link";
 import LogoDark from "../resources/logo/logo-dark.svg";
@@ -9,12 +9,19 @@ const Logo: React.FC = (props) => {
 	return (
 		<Box as={Link} href="/" {...props}>
 			<Flex align="center" cursor="pointer">
-				<Box
-					w={["35px", "40px", "45px", "50px"]}
-					h={["35px", "40px", "45px", "50px"]}
-				>
-					{colorMode === "light" ? <LogoLight /> : <LogoDark />}
-				</Box>
+				{colorMode === "light" ? (
+					<Icon
+						w={["35px", "40px", "45px", "50px"]}
+						h={["35px", "40px", "45px", "50px"]}
+						as={LogoLight}
+					/>
+				) : (
+					<Icon
+						w={["35px", "40px", "45px", "50px"]}
+						h={["35px", "40px", "45px", "50px"]}
+						as={LogoDark}
+					/>
+				)}
 				<Text
 					fontFamily="Poppins"
 					fontSize={["lg", "xl", "2xl", "3xl"]}
