@@ -14,7 +14,7 @@ const SocialButton: React.FC<SocialButtonProps> = ({
 }) => {
 	return (
 		<Button
-			bg={useColorModeValue("blackAlpha.100", "whiteAlpha.100")}
+			bg={useColorModeValue("white.300", "black.600")}
 			rounded={"full"}
 			w={8}
 			h={8}
@@ -27,7 +27,7 @@ const SocialButton: React.FC<SocialButtonProps> = ({
 			justifyContent={"center"}
 			transition={"background 0.3s ease"}
 			_hover={{
-				bg: useColorModeValue("blackAlpha.200", "whiteAlpha.200"),
+				bg: useColorModeValue("white.500", "black.800"),
 			}}
 		>
 			<VisuallyHidden>{label}</VisuallyHidden>

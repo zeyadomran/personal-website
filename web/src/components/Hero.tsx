@@ -49,7 +49,6 @@ const Hero: React.FC<any> = (props) => {
 				>
 					<NextLink href="/contact">
 						<Button
-							href="/contact"
 							colorScheme={"blue"}
 							bg={"blue.400"}
 							rounded={"lg"}
@@ -63,12 +62,7 @@ const Hero: React.FC<any> = (props) => {
 						</Button>
 					</NextLink>
 					<NextLink href="/about">
-						<Button
-							variant={"link"}
-							href="/about"
-							colorScheme={"navy"}
-							size={"sm"}
-						>
+						<Button variant={"link"} colorScheme={"navy"} size={"sm"}>
 							About Me
 						</Button>
 					</NextLink>
