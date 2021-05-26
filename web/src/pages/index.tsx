@@ -2,6 +2,7 @@ import Head from "next/head";
 import React from "react";
 import Footer from "../components/Footer";
 import Hero from "../components/Hero";
+import Main from "../components/Main";
 import Navbar from "../components/Navbar";
 
 const Index: React.FC = () => {
@@ -14,17 +15,12 @@ const Index: React.FC = () => {
 				/>
 				<title>Zeyad Omran - Developer</title>
 			</Head>
-			<main
-				style={{
-					display: "flex",
-					minHeight: "100vh",
-					flexDirection: "column",
-				}}
-			>
+
+			<Main>
 				<Navbar />
-				<Hero style={{ flex: 1 }} />
+				<Hero />
 				<Footer />
-			</main>
+			</Main>
 		</>
 	);
 };

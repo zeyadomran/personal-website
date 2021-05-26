@@ -1,6 +1,6 @@
 import { Stack } from "@chakra-ui/react";
 import React from "react";
-import ColorModeSwitch from "./ColorModeSwitch";
+import ColorModeToggle from "./ColorModeToggle";
 import Logo from "./Logo";
 import MenuToggle from "./MenuToggle";
 import NavBarContainer from "./NavBarContainer";
@@ -15,7 +15,7 @@ const Navbar: React.FC = (props) => {
 		<NavBarContainer {...props}>
 			<MenuToggle toggle={toggle} isOpen={isOpen} />
 			<Logo />
-			<ColorModeSwitch display={{ base: "block", md: "none" }} />
+			<ColorModeToggle display={{ base: "block", md: "none" }} />
 			<Stack
 				align="center"
 				justify={["center", "space-between", "flex-end", "flex-end"]}
@@ -23,7 +23,7 @@ const Navbar: React.FC = (props) => {
 				width={{ base: "100%", md: "auto" }}
 			>
 				<NavLinks isOpen={isOpen} />
-				<ColorModeSwitch display={{ base: "none", md: "block" }} />
+				<ColorModeToggle display={{ base: "none", md: "block" }} />
 			</Stack>
 		</NavBarContainer>
 	);

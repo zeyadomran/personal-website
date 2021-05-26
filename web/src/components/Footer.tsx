@@ -18,8 +18,9 @@ const Footer: React.FC = () => {
 			as="footer"
 			bg={useColorModeValue("gray.50", "gray.900")}
 			color={useColorModeValue("gray.700", "gray.200")}
-			mb={0}
-			mt="auto"
+			position="absolute"
+			bottom={0}
+			width="100%"
 		>
 			<Container
 				as={Stack}
