@@ -16,17 +16,17 @@ const UnderlineText: React.FC<UnderlineTextProps> = ({ text1, text2 }) => {
 				bottom: 0.5,
 				width: "45%",
 				height: "30%",
-				background: `${useColorModeValue("blue.100", "blue.900")}`,
+				background: useColorModeValue("blue.100", "blue.900"),
 				zIndex: -1,
 				transition: "width 0.5s",
 			}}
-			color={`${useColorModeValue("navy.300", "navy.100")}`}
+			color={useColorModeValue("navy.300", "navy.100")}
 			_hover={{ _after: { width: "100%" } }}
 			as="span"
 		>
 			{text1}
 			{text2 ? " " : ""}
-			<Box as="span" color={`${useColorModeValue("black.800", "white.100")}`}>
+			<Box as="span" color={useColorModeValue("black.800", "white.100")}>
 				{text2}
 			</Box>
 		</Box>

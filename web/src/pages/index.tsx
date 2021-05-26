@@ -1,21 +1,21 @@
-import { useColorMode } from "@chakra-ui/react";
 import Head from "next/head";
 import React from "react";
+import Hero from "../components/Hero";
 import Navbar from "../components/Navbar";
 
 const Index: React.FC = () => {
-	const { colorMode, toggleColorMode } = useColorMode();
 	return (
 		<>
 			<Head>
+				<link
+					href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&display=swap"
+					rel="stylesheet"
+				/>
 				<title>Zeyad Omran - Developer</title>
 			</Head>
 			<main>
 				<Navbar />
-				My website
-				<button onClick={() => toggleColorMode()}>
-					<img src={`/images/favicon/favicon-${colorMode}-32x32.png`} />
-				</button>
+				<Hero />
 			</main>
 		</>
 	);
