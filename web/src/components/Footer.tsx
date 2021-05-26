@@ -8,7 +8,7 @@ import {
 } from "@chakra-ui/react";
 import React from "react";
 import { FaInstagram, FaGithub, FaLinkedin } from "react-icons/fa";
-import Logo from "./Logo";
+import Logo from "../resources/logo/logo-dark.svg";
 import NavItem from "./NavItem";
 import SocialButton from "./SocialButton";
 
@@ -30,7 +30,11 @@ const Footer: React.FC = () => {
 				justify={"center"}
 				align={"center"}
 			>
-				<Logo />
+				<Icon
+					as={Logo}
+					w={["35px", "40px", "45px", "50px"]}
+					h={["35px", "40px", "45px", "50px"]}
+				/>
 				<Stack direction={"row"} spacing={6}>
 					<NavItem to={"/"}>Home</NavItem>
 					<NavItem to={"/about"}>About</NavItem>
