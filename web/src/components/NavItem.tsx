@@ -17,6 +17,7 @@ const NavItem: React.FC<NavItemProps> = ({ children, to, ...rest }) => {
 				fontWeight="bold"
 				fontFamily="Poppins"
 				px="2"
+				position="relative"
 				_hover={{ bg: `${useColorModeValue("white.200", "black.700")}` }}
 				{...rest}
 			>

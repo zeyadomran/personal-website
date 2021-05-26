@@ -1,4 +1,4 @@
-import { Box, Stack, Switch, useColorMode } from "@chakra-ui/react";
+import { Box, Stack } from "@chakra-ui/react";
 import React from "react";
 import NavItem from "./NavItem";
 
@@ -7,7 +7,6 @@ interface NavLinksProps {
 }
 
 const NavLinks: React.FC<NavLinksProps> = ({ isOpen }) => {
-	const { colorMode, toggleColorMode } = useColorMode();
 	return (
 		<Box
 			display={{ base: isOpen ? "block" : "none", md: "block" }}
@@ -18,19 +17,12 @@ const NavLinks: React.FC<NavLinksProps> = ({ isOpen }) => {
 				align="center"
 				justify={["center", "space-between", "flex-end", "flex-end"]}
 				direction={["column", "row", "row", "row"]}
+				mt={[2, 2, 0, 0]}
 			>
 				<NavItem to="/">Home</NavItem>
 				<NavItem to="/about">About</NavItem>
 				<NavItem to="/projects">Projects</NavItem>
 				<NavItem to="/contact">Contact</NavItem>
-				<Switch
-					colorScheme="green"
-					size="md"
-					px={2}
-					isChecked={colorMode === "dark"}
-					onChange={() => toggleColorMode()}
-					isLast
-				/>
 			</Stack>
 		</Box>
 	);

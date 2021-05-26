@@ -14,8 +14,8 @@ const config: ChakraConfig = {
 };
 
 const fonts = {
-	heading: "Poppins",
-	body: "Roboto",
+	heading: "Poppins, sans-serif",
+	body: "Roboto, sans-serif",
 };
 
 const theme = extendTheme({
