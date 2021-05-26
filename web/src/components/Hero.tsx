@@ -12,9 +12,9 @@ import {
 import NextLink from "next/link";
 import React from "react";
 
-const Hero: React.FC = () => {
+const Hero: React.FC<any> = (props) => {
 	return (
-		<Container maxW={"3xl"}>
+		<Container maxW={"3xl"} {...props}>
 			<Stack
 				as={Box}
 				textAlign={"center"}
