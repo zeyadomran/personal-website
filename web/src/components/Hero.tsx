@@ -14,13 +14,8 @@ import React from "react";
 
 const Hero: React.FC<any> = (props) => {
 	return (
-		<Container maxW={"3xl"} {...props}>
-			<Stack
-				as={Box}
-				textAlign={"center"}
-				spacing={{ base: 4, md: 7 }}
-				py={{ base: 20, md: 36 }}
-			>
+		<Container maxW={"3xl"} my={{ base: 20, md: 36 }} {...props}>
+			<Stack as={Box} textAlign={"center"} spacing={{ base: 4, md: 7 }}>
 				<Heading
 					fontWeight={"bold"}
 					fontSize={{ base: "4xl", sm: "6xl", md: "8xl" }}

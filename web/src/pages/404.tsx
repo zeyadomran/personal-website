@@ -14,7 +14,7 @@ const Custom404: React.FC = () => {
 			<Main>
 				<Navbar />
 				<Error404 />
-				<Footer />
+				<Footer position="absolute" bottom={0} />
 			</Main>
 		</>
 	);

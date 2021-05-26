@@ -12,15 +12,16 @@ import Logo from "../resources/logo/logo-dark.svg";
 import NavItem from "./NavItem";
 import SocialButton from "./SocialButton";
 
-const Footer: React.FC = () => {
+const Footer: React.FC<any> = (props) => {
 	return (
 		<Box
 			as="footer"
 			bg={useColorModeValue("gray.50", "gray.900")}
 			color={useColorModeValue("gray.700", "gray.200")}
-			position="absolute"
-			bottom={0}
 			width="100%"
+			shadow="sm"
+			flexShrink={0}
+			{...props}
 		>
 			<Container
 				as={Stack}
@@ -57,7 +58,9 @@ const Footer: React.FC = () => {
 					justify={{ base: "center", md: "space-between" }}
 					align={{ base: "center", md: "center" }}
 				>
-					<Text>© 2021 Zeyad Omran. All rights reserved</Text>
+					<Text>
+						© {new Date().getFullYear()} Zeyad Omran. All rights reserved
+					</Text>
 					<Stack direction={"row"} spacing={6}>
 						<SocialButton
 							label={"Github"}

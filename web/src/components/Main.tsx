@@ -1,17 +1,11 @@
+import { Box } from "@chakra-ui/react";
+import React from "react";
+
 const Main: React.FC = ({ children, ...props }) => {
 	return (
-		<main
-			style={{
-				minHeight: "100vh",
-				overflow: "hidden",
-				display: "block",
-				position: "relative",
-				paddingBottom: "100px",
-			}}
-			{...props}
-		>
+		<Box as="main" flex="1 0 auto" {...props}>
 			{children}
-		</main>
+		</Box>
 	);
 };
 
