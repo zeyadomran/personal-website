@@ -1,4 +1,4 @@
-import { MoonIcon, SunIcon } from "@chakra-ui/icons";
+import { FaMoon, FaSun } from "react-icons/fa";
 import { Icon, useColorMode, useColorModeValue } from "@chakra-ui/react";
 import React from "react";
 
@@ -10,7 +10,7 @@ const ColorModeSwitch: React.FC<any> = (props) => {
 			cursor="pointer"
 			w="20px"
 			h="20px"
-			as={useColorModeValue(MoonIcon, SunIcon)}
+			as={useColorModeValue(FaMoon, FaSun)}
 			{...props}
 		/>
 	);

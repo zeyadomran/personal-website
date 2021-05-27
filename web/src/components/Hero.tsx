@@ -11,11 +11,19 @@ import {
 } from "@chakra-ui/react";
 import NextLink from "next/link";
 import React from "react";
+import UnderlineText from "./UnderlineText";
 
 const Hero: React.FC<any> = (props) => {
 	return (
-		<Container maxW={"3xl"} my={{ base: 20, md: 36 }} {...props}>
-			<Stack as={Box} textAlign={"center"} spacing={{ base: 4, md: 7 }}>
+		<Box mt={20} {...props}>
+			<Stack
+				as={Container}
+				maxW={"7xl"}
+				spacing={{ base: 4, md: 7 }}
+				py={{ base: 24, md: 32 }}
+				direction={"column"}
+				alignItems={"center"}
+			>
 				<Heading
 					fontWeight={"bold"}
 					fontSize={{ base: "4xl", sm: "6xl", md: "8xl" }}
@@ -24,7 +32,7 @@ const Hero: React.FC<any> = (props) => {
 				>
 					Full Stack <br />
 					<Text as={"span"} color={"blue.400"}>
-						Developer
+						<UnderlineText>Developer</UnderlineText>
 					</Text>
 				</Heading>
 				<Text
@@ -50,7 +58,7 @@ const Hero: React.FC<any> = (props) => {
 							color={"white.100"}
 							px={6}
 							_hover={{
-								bg: "blue.500",
+								bg: "blue.700",
 							}}
 						>
 							Contact Me
@@ -83,7 +91,7 @@ const Hero: React.FC<any> = (props) => {
 					</Box>
 				</Stack>
 			</Stack>
-		</Container>
+		</Box>
 	);
 };
 

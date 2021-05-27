@@ -13,7 +13,7 @@ import NextLink from "next/link";
 import React from "react";
 import Logo from "../resources/logo/logo-dark.svg";
 
-const Custom404: React.FC = () => {
+const Custom500: React.FC = () => {
 	return (
 		<>
 			<Head>
@@ -36,11 +36,8 @@ const Custom404: React.FC = () => {
 						h={["35px", "40px", "45px", "50px"]}
 					/>
 					<Stack spacing={2}>
-						<Heading>Page not found</Heading>
-						<Text>
-							This page was not found. You may have mistyped the address or the
-							page may have moved.
-						</Text>
+						<Heading>An Error Occurred</Heading>
+						<Text>Please try again later!</Text>
 					</Stack>
 					<Flex>
 						<NextLink href={"/"} passHref>
@@ -62,4 +59,4 @@ const Custom404: React.FC = () => {
 	);
 };
 
-export default Custom404;
+export default Custom500;

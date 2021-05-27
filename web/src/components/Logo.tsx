@@ -21,8 +21,9 @@ const Logo: React.FC = (props) => {
 					ml={3}
 					position="relative"
 					zIndex={10}
+					display={{ base: "none", md: "block" }}
 				>
-					<UnderlineText text1="Zeyad" text2="Omran" />
+					<UnderlineText>Zeyad</UnderlineText> Omran
 				</Heading>
 			</Flex>
 		</Link>
