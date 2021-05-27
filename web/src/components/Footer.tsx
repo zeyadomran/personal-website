@@ -29,7 +29,7 @@ const Footer: React.FC<any> = (props) => {
 		>
 			<Container
 				as={Stack}
-				maxW={"6xl"}
+				maxW={"7xl"}
 				py={4}
 				direction={{ base: "column", md: "row" }}
 				spacing={4}

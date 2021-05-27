@@ -12,7 +12,7 @@ const UnderlineText: React.FC = ({ children }) => {
 				content: '""',
 				position: "absolute",
 				left: 0,
-				bottom: 0,
+				bottom: 1,
 				w: "full",
 				h: "30%",
 				bg: useColorModeValue("blue.100", "blue.900"),
