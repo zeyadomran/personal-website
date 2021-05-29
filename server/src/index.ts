@@ -11,6 +11,7 @@ import session from "express-session";
 import MongoStore from "connect-mongo";
 import { COOKIE_NAME, MONGO_OPTIONS, __prod__ } from "./Constants";
 import AdminResolver from "./resolvers/AdminResolver";
+import cors from "cors";
 
 const main = async () => {
 	// Connecting to MongoDB
@@ -20,6 +21,9 @@ const main = async () => {
 
 	// Creating instance of express server
 	const app = express();
+
+	app.set("trust proxy", 1);
+	app.use(cors());
 
 	app.use(
 		session({

@@ -9,6 +9,7 @@ interface NavLinksProps {
 const NavLinks: React.FC<NavLinksProps> = ({ isOpen }) => {
 	return (
 		<Box
+			as="nav"
 			display={{ base: isOpen ? "block" : "none", md: "block" }}
 			flexBasis={{ base: "100%", md: "auto" }}
 		>

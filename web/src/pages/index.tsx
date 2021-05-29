@@ -15,7 +15,6 @@ const Index: React.FC = () => {
 				/>
 				<title>Zeyad Omran - Developer</title>
 			</Head>
-
 			<Main>
 				<Navbar />
 				<Hero />
