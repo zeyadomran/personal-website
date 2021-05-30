@@ -1,15 +1,17 @@
-import { List, Text, ListItem, Link } from "@chakra-ui/react";
+import { Heading } from "@chakra-ui/layout";
 import Head from "next/head";
 import React from "react";
+import Card from "../components/Card";
+import CardContainer from "../components/CardContainer";
+import Container from "../components/Container";
 import Footer from "../components/Footer";
 import Main from "../components/Main";
 import Navbar from "../components/Navbar";
+import UnderlineText from "../components/UnderlineText";
 import { useProjectsQuery } from "../generated/graphql";
 
 const Projects: React.FC = () => {
-	const { data } = useProjectsQuery({
-		notifyOnNetworkStatusChange: true,
-	});
+	const { data } = useProjectsQuery();
 
 	if (!data) {
 		return null;
@@ -24,19 +26,16 @@ const Projects: React.FC = () => {
 			</Head>
 			<Main>
 				<Navbar />
-				<List my={20} py={{ base: 24, md: 32 }} textAlign={"center"}>
-					{projects.map((project: any) => (
-						<ListItem key={project.id}>
-							<Text>{project.title}</Text>
-							<Text>{project.description}</Text>
-							<Text>{project.technologies}</Text>
-							<Text>{project.completionDate}</Text>
-							<Link href={project.url} isExternal>
-								Link
-							</Link>
-						</ListItem>
-					))}
-				</List>
+				<Container>
+					<Heading as="h1" fontSize={{ base: "6xl", md: "8xl" }} mb={20}>
+						<UnderlineText>Projects</UnderlineText>
+					</Heading>
+					<CardContainer>
+						{projects.map((project) => (
+							<Card key={project.id} data={project} />
+						))}
+					</CardContainer>
+				</Container>
 				<Footer />
 			</Main>
 		</>
