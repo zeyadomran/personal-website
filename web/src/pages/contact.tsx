@@ -1,24 +1,37 @@
-import { useColorMode } from "@chakra-ui/react";
+import { Flex, Heading, Stack } from "@chakra-ui/react";
 import Head from "next/head";
 import React from "react";
+import ContactForm from "../components/ContactForm";
+import Footer from "../components/Footer";
+import Main from "../components/Main";
 import Navbar from "../components/Navbar";
+import UnderlineText from "../components/UnderlineText";
 import { withApollo } from "../utils/withApollo";
 
 const Contact: React.FC = () => {
-	const { colorMode, toggleColorMode } = useColorMode();
-
 	return (
 		<>
 			<Head>
 				<title>Zeyad Omran - Contact</title>
 			</Head>
-			<main>
+			<Main>
 				<Navbar />
-				Contact
-				<button onClick={() => toggleColorMode()}>
-					<img src={`/images/favicon/favicon-${colorMode}-32x32.png`} />
-				</button>
-			</main>
+				<Flex my={8} w={"full"}>
+					<Stack
+						align="center"
+						w={["95%", "90%", "85%", "80%"]}
+						mx="auto"
+						py={{ base: 20, md: 36 }}
+						spacing={10}
+					>
+						<Heading as="h1" fontSize={{ base: "5xl", md: "8xl" }}>
+							<UnderlineText>Contact Me</UnderlineText>
+						</Heading>
+						<ContactForm />
+					</Stack>
+				</Flex>
+				<Footer />
+			</Main>
 		</>
 	);
 };
