@@ -45,6 +45,7 @@ const main = async () => {
 				httpOnly: true,
 				sameSite: "lax", // csrf.
 				secure: __prod__, // cookie only works in https.
+				domain: __prod__ ? ".zeyadomran.com" : undefined,
 			},
 			secret: process.env.SESSION_SECRET as string,
 			saveUninitialized: false,
@@ -67,6 +68,7 @@ const main = async () => {
 			req,
 			res,
 		}),
+		playground: __prod__ ? undefined : true,
 	});
 
 	// Applying app as middleware to Apollo Server
