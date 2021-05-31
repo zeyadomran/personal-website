@@ -25,7 +25,7 @@ const EducationCard: React.FC<CardProps> = ({ data }) => {
 				bg={useColorModeValue("white.100", "black.800")}
 				borderRadius={"xl"}
 				p={8}
-				w={"lg"}
+				maxW={{ base: "sm", md: "lg" }}
 				spacing={6}
 				borderColor={useColorModeValue("white.100", "black.700")}
 				borderWidth={"2px"}
@@ -33,8 +33,8 @@ const EducationCard: React.FC<CardProps> = ({ data }) => {
 					borderColor: useColorModeValue("white.300", "black.600"),
 				}}
 			>
-				<Flex align="center" justify="space-between" w="full" mb={5}>
-					<Heading as="h2" fontSize={{ base: "2xl", md: "3xl" }}>
+				<Flex align="center" justify="space-between" w="full">
+					<Heading as="h2" fontSize={{ base: "xl", md: "3xl" }}>
 						<UnderlineText>{data.school}</UnderlineText>
 					</Heading>
 					<Badge ml={3} variant="outline" colorScheme={"blue"}>
