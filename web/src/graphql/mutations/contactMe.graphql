@@ -1,0 +1,3 @@
+mutation ContactMe($from: String!, $subject: String!, $message: String!) {
+	contactMe(from: $from, subject: $subject, message: $message)
+}

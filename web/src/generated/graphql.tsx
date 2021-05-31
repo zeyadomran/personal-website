@@ -88,6 +88,8 @@ export type Mutation = {
   loginAdmin?: Maybe<Admin>;
   /** Logs out an admin. */
   logout: Scalars['Boolean'];
+  /** Send an email from the user to me. */
+  contactMe: Scalars['Boolean'];
 };
 
 
@@ -130,6 +132,13 @@ export type MutationRegisterAdminArgs = {
 export type MutationLoginAdminArgs = {
   password: Scalars['String'];
   username: Scalars['String'];
+};
+
+
+export type MutationContactMeArgs = {
+  message: Scalars['String'];
+  subject: Scalars['String'];
+  from: Scalars['String'];
 };
 
 /** The Project Model. */
@@ -205,6 +214,18 @@ export type UpdateProjectType = {
   completionDate?: Maybe<Scalars['String']>;
 };
 
+export type ContactMeMutationVariables = Exact<{
+  from: Scalars['String'];
+  subject: Scalars['String'];
+  message: Scalars['String'];
+}>;
+
+
+export type ContactMeMutation = (
+  { __typename?: 'Mutation' }
+  & Pick<Mutation, 'contactMe'>
+);
+
 export type CertificatesQueryVariables = Exact<{ [key: string]: never; }>;
 
 
@@ -228,6 +249,39 @@ export type ProjectsQuery = (
 );
 
 
+export const ContactMeDocument = gql`
+    mutation ContactMe($from: String!, $subject: String!, $message: String!) {
+  contactMe(from: $from, subject: $subject, message: $message)
+}
+    `;
+export type ContactMeMutationFn = Apollo.MutationFunction<ContactMeMutation, ContactMeMutationVariables>;
+
+/**
+ * __useContactMeMutation__
+ *
+ * To run a mutation, you first call `useContactMeMutation` within a React component and pass it any options that fit your needs.
+ * When your component renders, `useContactMeMutation` returns a tuple that includes:
+ * - A mutate function that you can call at any time to execute the mutation
+ * - An object with fields that represent the current status of the mutation's execution
+ *
+ * @param baseOptions options that will be passed into the mutation, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options-2;
+ *
+ * @example
+ * const [contactMeMutation, { data, loading, error }] = useContactMeMutation({
+ *   variables: {
+ *      from: // value for 'from'
+ *      subject: // value for 'subject'
+ *      message: // value for 'message'
+ *   },
+ * });
+ */
+export function useContactMeMutation(baseOptions?: Apollo.MutationHookOptions<ContactMeMutation, ContactMeMutationVariables>) {
+        const options = {...defaultOptions, ...baseOptions}
+        return Apollo.useMutation<ContactMeMutation, ContactMeMutationVariables>(ContactMeDocument, options);
+      }
+export type ContactMeMutationHookResult = ReturnType<typeof useContactMeMutation>;
+export type ContactMeMutationResult = Apollo.MutationResult<ContactMeMutation>;
+export type ContactMeMutationOptions = Apollo.BaseMutationOptions<ContactMeMutation, ContactMeMutationVariables>;
 export const CertificatesDocument = gql`
     query Certificates {
   certificates {
