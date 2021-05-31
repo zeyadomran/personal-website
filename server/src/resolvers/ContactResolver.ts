@@ -13,7 +13,7 @@ class ContactResolver {
 		@Arg("subject") subject: string,
 		@Arg("message") message: string
 	) {
-		if (__prod__) {
+		if (!__prod__) {
 			await dev(from, subject, `<p>${message}</p>`);
 		} else {
 			await prod(subject, `<p>From: ${from}<br/>${message}</p>`);
