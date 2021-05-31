@@ -39,7 +39,7 @@ const Card: React.FC<CardProps> = ({ data }) => {
 						<Heading as="h2" fontSize={{ base: "2xl", md: "3xl" }}>
 							<UnderlineText>{data.title}</UnderlineText>
 						</Heading>
-						<Badge ml={5} variant="outline" colorScheme={"blue"}>
+						<Badge ml={3} variant="outline" colorScheme={"blue"}>
 							{data.completionDate}
 						</Badge>
 					</Flex>
