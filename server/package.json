@@ -5,6 +5,7 @@
 	"author": "Zeyad Omran",
 	"license": "MIT",
 	"scripts": {
+		"build": "tsc",
 		"watch": "tsc -w",
 		"start": "nodemon dist/index.js",
 		"start2": "ts-node src/index.ts"
