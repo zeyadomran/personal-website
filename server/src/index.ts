@@ -12,6 +12,7 @@ import MongoStore from "connect-mongo";
 import { COOKIE_NAME, MONGO_OPTIONS, __prod__ } from "./Constants";
 import AdminResolver from "./resolvers/AdminResolver";
 import cors from "cors";
+import ContactResolver from "./resolvers/ContactResolver";
 
 const main = async () => {
 	// Connecting to MongoDB
@@ -25,7 +26,7 @@ const main = async () => {
 	app.set("trust proxy", 1);
 	app.use(
 		cors({
-			origin: true,
+			origin: process.env.CORS_ORIGIN!,
 			credentials: true,
 		})
 	);
@@ -52,7 +53,12 @@ const main = async () => {
 	// Creating instance of Apollo Server
 	const apolloServer = new ApolloServer({
 		schema: await buildSchema({
-			resolvers: [ProjectResolver, CertificateResolver, AdminResolver],
+			resolvers: [
+				ProjectResolver,
+				CertificateResolver,
+				AdminResolver,
+				ContactResolver,
+			],
 			validate: false,
 		}),
 		context: ({ req, res }) => ({
