@@ -25,7 +25,7 @@ const main = async () => {
 	app.set("trust proxy", 1);
 	app.use(
 		cors({
-			origin: process.env.CORS_ORIGIN,
+			origin: true,
 			credentials: true,
 		})
 	);

@@ -205,6 +205,17 @@ export type UpdateProjectType = {
   completionDate?: Maybe<Scalars['String']>;
 };
 
+export type CertificatesQueryVariables = Exact<{ [key: string]: never; }>;
+
+
+export type CertificatesQuery = (
+  { __typename?: 'Query' }
+  & { certificates: Array<(
+    { __typename?: 'Certificate' }
+    & Pick<Certificate, 'id' | 'title' | 'issuer' | 'certificateID' | 'completionDate' | 'url'>
+  )> }
+);
+
 export type ProjectsQueryVariables = Exact<{ [key: string]: never; }>;
 
 
@@ -217,6 +228,45 @@ export type ProjectsQuery = (
 );
 
 
+export const CertificatesDocument = gql`
+    query Certificates {
+  certificates {
+    id
+    title
+    issuer
+    certificateID
+    completionDate
+    url
+  }
+}
+    `;
+
+/**
+ * __useCertificatesQuery__
+ *
+ * To run a query within a React component, call `useCertificatesQuery` and pass it any options that fit your needs.
+ * When your component renders, `useCertificatesQuery` returns an object from Apollo Client that contains loading, error, and data properties
+ * you can use to render your UI.
+ *
+ * @param baseOptions options that will be passed into the query, supported options are listed on: https://www.apollographql.com/docs/react/api/react-hooks/#options;
+ *
+ * @example
+ * const { data, loading, error } = useCertificatesQuery({
+ *   variables: {
+ *   },
+ * });
+ */
+export function useCertificatesQuery(baseOptions?: Apollo.QueryHookOptions<CertificatesQuery, CertificatesQueryVariables>) {
+        const options = {...defaultOptions, ...baseOptions}
+        return Apollo.useQuery<CertificatesQuery, CertificatesQueryVariables>(CertificatesDocument, options);
+      }
+export function useCertificatesLazyQuery(baseOptions?: Apollo.LazyQueryHookOptions<CertificatesQuery, CertificatesQueryVariables>) {
+          const options = {...defaultOptions, ...baseOptions}
+          return Apollo.useLazyQuery<CertificatesQuery, CertificatesQueryVariables>(CertificatesDocument, options);
+        }
+export type CertificatesQueryHookResult = ReturnType<typeof useCertificatesQuery>;
+export type CertificatesLazyQueryHookResult = ReturnType<typeof useCertificatesLazyQuery>;
+export type CertificatesQueryResult = Apollo.QueryResult<CertificatesQuery, CertificatesQueryVariables>;
 export const ProjectsDocument = gql`
     query Projects {
   projects {

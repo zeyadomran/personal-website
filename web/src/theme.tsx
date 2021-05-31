@@ -9,7 +9,7 @@ interface ChakraConfig {
 }
 
 const config: ChakraConfig = {
-	initialColorMode: "light",
+	initialColorMode: "dark",
 	useSystemColorMode: false,
 };
 

@@ -1,0 +1,10 @@
+query Certificates {
+	certificates {
+		id
+		title
+		issuer
+		certificateID
+		completionDate
+		url
+	}
+}
