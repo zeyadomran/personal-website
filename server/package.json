@@ -5,6 +5,7 @@
 	"author": "Zeyad Omran",
 	"license": "MIT",
 	"scripts": {
+		"gen-env": "npx gen-env-types .env -o src/types/env.d.ts -e .",
 		"build": "tsc",
 		"watch": "tsc -w",
 		"start": "nodemon dist/index.js",
@@ -16,7 +17,7 @@
 		"bcrypt": "^5.0.1",
 		"connect-mongo": "^4.4.1",
 		"cors": "^2.8.5",
-		"dotenv": "^9.0.2",
+		"dotenv-safe": "^8.2.0",
 		"express": "^4.17.1",
 		"express-session": "^1.17.2",
 		"graphql": "^15.5.0",
