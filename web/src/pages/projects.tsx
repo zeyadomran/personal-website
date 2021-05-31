@@ -9,6 +9,7 @@ import Main from "../components/Main";
 import Navbar from "../components/Navbar";
 import UnderlineText from "../components/UnderlineText";
 import { useProjectsQuery } from "../generated/graphql";
+import { withApollo } from "../utils/withApollo";
 
 const Projects: React.FC = () => {
 	const { data } = useProjectsQuery();
@@ -42,4 +43,4 @@ const Projects: React.FC = () => {
 	);
 };
 
-export default Projects;
+export default withApollo({ ssr: true })(Projects);

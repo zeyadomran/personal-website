@@ -23,7 +23,7 @@ const main = async () => {
 	const app = express();
 
 	app.set("trust proxy", 1);
-	app.use(cors({ origin: "*" }));
+	app.use(cors({ origin: "http://192.168.0.131:3000" }));
 
 	app.use(
 		session({

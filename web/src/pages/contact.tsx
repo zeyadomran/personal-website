@@ -2,6 +2,7 @@ import { useColorMode } from "@chakra-ui/react";
 import Head from "next/head";
 import React from "react";
 import Navbar from "../components/Navbar";
+import { withApollo } from "../utils/withApollo";
 
 const Contact: React.FC = () => {
 	const { colorMode, toggleColorMode } = useColorMode();
@@ -22,4 +23,4 @@ const Contact: React.FC = () => {
 	);
 };
 
-export default Contact;
+export default withApollo({ ssr: false })(Contact);

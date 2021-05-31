@@ -1,6 +1,6 @@
-import { Flex, Icon, Heading } from "@chakra-ui/react";
-import React from "react";
+import { Flex, Heading, Icon } from "@chakra-ui/react";
 import Link from "next/link";
+import React from "react";
 import LogoDark from "../resources/logo/logo-dark.svg";
 import UnderlineText from "./UnderlineText";
 

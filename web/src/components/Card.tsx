@@ -3,12 +3,9 @@ import {
 	Center,
 	Flex,
 	Heading,
-	Kbd,
 	Link,
 	Stack,
 	StackItem,
-	Stat,
-	StatNumber,
 	Text,
 	useColorModeValue,
 	Wrap,
@@ -30,10 +27,12 @@ const Card: React.FC<CardProps> = ({ data }) => {
 				borderRadius={"xl"}
 				p={8}
 				w={"sm"}
-				align={"center"}
-				spacing={10}
-				boxShadow={"md"}
-				_hover={{ boxShadow: "lg" }}
+				spacing={6}
+				borderColor={useColorModeValue("white.100", "black.700")}
+				borderWidth={"2px"}
+				_hover={{
+					borderColor: useColorModeValue("white.300", "black.600"),
+				}}
 			>
 				<StackItem textAlign="center" w="full">
 					<Flex align="center" justify="center" mb={5}>
@@ -50,35 +49,35 @@ const Card: React.FC<CardProps> = ({ data }) => {
 				</StackItem>
 				{data.url && (
 					<StackItem>
-						<Link
-							px={4}
-							py={3}
-							colorScheme={"blue"}
-							bg={"blue.400"}
-							rounded={"md"}
-							color={"white.100"}
-							_hover={{
-								bg: "blue.700",
-							}}
-							href={data.url}
-							isExternal
-						>
-							Check it out!
-						</Link>
+						<Center>
+							<Link
+								px={4}
+								py={3}
+								colorScheme={"blue"}
+								bg={"blue.400"}
+								rounded={"md"}
+								color={"white.100"}
+								_hover={{
+									bg: "blue.700",
+								}}
+								href={data.url}
+								isExternal
+							>
+								View Repo!
+							</Link>
+						</Center>
 					</StackItem>
 				)}
 				<StackItem>
-					<Center>
-						<Wrap justify="center" px={5}>
-							{data.technologies.map((tech, i) => (
-								<WrapItem key={i}>
-									<Badge variant="solid" colorScheme={"blue"}>
-										{tech.toUpperCase()}
-									</Badge>
-								</WrapItem>
-							))}
-						</Wrap>
-					</Center>
+					<Wrap px={5}>
+						{data.technologies.map((tech, i) => (
+							<WrapItem key={i}>
+								<Badge variant="solid" colorScheme={"blue"}>
+									{tech.toUpperCase()}
+								</Badge>
+							</WrapItem>
+						))}
+					</Wrap>
 				</StackItem>
 			</Stack>
 		</WrapItem>
