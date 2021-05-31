@@ -15,12 +15,11 @@ import UnderlineText from "./UnderlineText";
 
 const Hero: React.FC<any> = (props) => {
 	return (
-		<Box mt={20} {...props}>
+		<Box {...props}>
 			<Stack
 				as={Container}
 				maxW={"7xl"}
 				spacing={{ base: 4, md: 7 }}
-				py={{ base: 24, md: 32 }}
 				direction={"column"}
 				alignItems={"center"}
 			>

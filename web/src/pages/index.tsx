@@ -1,5 +1,7 @@
 import Head from "next/head";
 import React from "react";
+import Container from "../components/Container";
+import Features from "../components/Features";
 import Footer from "../components/Footer";
 import Hero from "../components/Hero";
 import Main from "../components/Main";
@@ -17,7 +19,10 @@ const Index: React.FC = () => {
 			</Head>
 			<Main>
 				<Navbar />
-				<Hero />
+				<Container>
+					<Hero />
+					<Features />
+				</Container>
 				<Footer />
 			</Main>
 		</>

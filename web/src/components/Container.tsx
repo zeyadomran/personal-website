@@ -1,19 +1,19 @@
-import { Flex } from "@chakra-ui/react";
+import { Flex, Stack } from "@chakra-ui/react";
 import React from "react";
 
 const Container: React.FC = ({ children, ...props }) => {
 	return (
-		<Flex mb={8} w={"full"}>
-			<Flex
+		<Flex my={8} w={"full"}>
+			<Stack
 				align="center"
-				direction={"column"}
 				w={["95%", "90%", "85%", "80%"]}
 				mx="auto"
 				py={{ base: 20, md: 36 }}
+				spacing={20}
 				{...props}
 			>
 				{children}
-			</Flex>
+			</Stack>
 		</Flex>
 	);
 };
