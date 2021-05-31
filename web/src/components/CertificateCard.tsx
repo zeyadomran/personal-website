@@ -61,7 +61,7 @@ const CertificateCard: React.FC<CardProps> = ({ data }) => {
 							href={data.url}
 							isExternal
 						>
-							View Credential!
+							View Credential
 						</Link>
 					</Center>
 				</StackItem>

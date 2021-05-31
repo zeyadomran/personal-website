@@ -63,7 +63,7 @@ const ProjectCard: React.FC<CardProps> = ({ data }) => {
 								href={data.url}
 								isExternal
 							>
-								View Repo!
+								View Repo
 							</Link>
 						</Center>
 					</StackItem>
