@@ -3,7 +3,6 @@ import { Head as NextHead } from "next/document";
 const Head = () => {
 	return (
 		<NextHead>
-			<meta name="viewport" content="width=device-width, initial-scale=1" />
 			<link
 				rel="apple-touch-icon"
 				sizes="180x180"
@@ -27,8 +26,7 @@ const Head = () => {
 				href="images/favicon/safari-pinned-tab.svg"
 				color="#1fa2f4"
 			/>
-			<meta name="msapplication-TileColor" content="#2d89ef" />
-			<meta name="theme-color" content="#ededed" />
+
 			<link rel="preconnect" href="https://fonts.gstatic.com" />
 			<link
 				href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto&display=swap"
