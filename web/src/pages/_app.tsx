@@ -1,29 +1,17 @@
 import { ChakraProvider } from "@chakra-ui/react";
 import { AppProps } from "next/app";
-import Router from "next/router";
 import Head from "next/head";
+import { Router } from "next/router";
+import NProgress from "nprogress";
+import "nprogress/nprogress.css";
 import React from "react";
 import theme from "../theme";
-import Loading from "../components/Loading";
 
 const App: React.FC<AppProps> = ({ Component, pageProps }) => {
-	const [loading, setLoading] = React.useState(false);
-	React.useEffect(() => {
-		const start = () => {
-			setLoading(true);
-		};
-		const end = () => {
-			setLoading(false);
-		};
-		Router.events.on("routeChangeStart", start);
-		Router.events.on("routeChangeComplete", end);
-		Router.events.on("routeChangeError", end);
-		return () => {
-			Router.events.off("routeChangeStart", start);
-			Router.events.off("routeChangeComplete", end);
-			Router.events.off("routeChangeError", end);
-		};
-	}, []);
+	Router.events.on("routeChangeStart", () => NProgress.start());
+	Router.events.on("routeChangeComplete", () => NProgress.done());
+	Router.events.on("routeChangeError", () => NProgress.done());
+
 	return (
 		<>
 			<Head>
@@ -42,7 +30,7 @@ const App: React.FC<AppProps> = ({ Component, pageProps }) => {
 				<meta name="theme-color" content="#ededed" />
 			</Head>
 			<ChakraProvider resetCSS theme={theme}>
-				{loading ? <Loading /> : <Component {...pageProps} />}
+				<Component {...pageProps} />
 			</ChakraProvider>
 		</>
 	);

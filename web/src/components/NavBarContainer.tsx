@@ -11,7 +11,7 @@ const NavBarContainer: React.FC = ({ children, ...props }) => {
 			top="0"
 			w={"full"}
 			minH={"60px"}
-			zIndex="999"
+			zIndex="100"
 			css={{
 				backdropFilter: "saturate(180%) blur(5px)",
 				backgroundColor: useColorModeValue(
