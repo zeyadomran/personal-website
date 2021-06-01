@@ -4,10 +4,14 @@ import React from "react";
 import LogoDark from "../resources/logo/logo-dark.svg";
 import UnderlineText from "./UnderlineText";
 
-const Logo: React.FC = (props) => {
+interface LogoProps {
+	hideText: boolean;
+}
+
+const Logo: React.FC<LogoProps> = ({ hideText = true }) => {
 	return (
 		<Link href="/">
-			<Flex align="center" cursor="pointer" {...props}>
+			<Flex align="center" cursor="pointer">
 				<Icon
 					w={["35px", "40px", "45px", "50px"]}
 					h={["35px", "40px", "45px", "50px"]}
@@ -21,7 +25,7 @@ const Logo: React.FC = (props) => {
 					ml={3}
 					position="relative"
 					zIndex={10}
-					display={{ base: "none", md: "block" }}
+					display={{ base: `${!hideText ? "block" : "none"}`, md: "block" }}
 				>
 					<UnderlineText>Zeyad</UnderlineText> Omran
 				</Heading>
