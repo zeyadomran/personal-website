@@ -5,7 +5,7 @@ import LogoDark from "../resources/logo/logo-dark.svg";
 import UnderlineText from "./UnderlineText";
 
 interface LogoProps {
-	hideText: boolean;
+	hideText?: boolean;
 }
 
 const Logo: React.FC<LogoProps> = ({ hideText = true }) => {
