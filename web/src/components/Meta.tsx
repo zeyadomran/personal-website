@@ -1,4 +1,5 @@
 import Head from "next/head";
+import { useRouter } from "next/router";
 
 const Meta: React.FC = () => (
 	<Head>
@@ -25,7 +26,10 @@ const Meta: React.FC = () => (
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<meta name="msapplication-TileColor" content="#2d89ef" />
 		<meta name="theme-color" content="#ededed" />
-		<link rel="canonical" href="https://zeyadomran.com/" />
+		<link
+			rel="canonical"
+			href={`https://zeyadomran.com/${useRouter().pathname}`}
+		/>
 	</Head>
 );
 
