@@ -16,6 +16,7 @@ const Index: React.FC = () => {
 					rel="stylesheet"
 				/>
 				<title>Zeyad Omran - Developer</title>
+				<meta property="og:title" content="Zeyad Omran - Developer" />
 			</Head>
 			<Main>
 				<Navbar />

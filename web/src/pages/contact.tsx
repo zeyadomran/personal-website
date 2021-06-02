@@ -13,6 +13,7 @@ const Contact: React.FC = () => {
 		<>
 			<Head>
 				<title>Zeyad Omran - Contact</title>
+				<meta property="og:title" content="Zeyad Omran - Contact" />
 			</Head>
 			<Main>
 				<Navbar />

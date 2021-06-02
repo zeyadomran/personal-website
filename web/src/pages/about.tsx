@@ -25,6 +25,7 @@ const About: React.FC = () => {
 		<>
 			<Head>
 				<title>Zeyad Omran - About</title>
+				<meta property="og:title" content="Zeyad Omran - About" />
 			</Head>
 			<Main>
 				<Navbar />
