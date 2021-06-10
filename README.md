@@ -21,13 +21,14 @@ You can view the production version [right here](https://zeyadomran.com)
   
 ## Deployment
 
+To deploy the front end, just push to the the prod branch, the front end is deployed on Vercel.
+
 To deploy the server, the server is deploying in a DigitalOcean droplet.
 
 ```bash
   cd server
   sh deploy.sh
 ```
-To deploy the front end, just push to the the prod branch, the front end is deployed on Vercel.
   
 ## Authors
 
