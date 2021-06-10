@@ -16,18 +16,18 @@ You can view the production version [right here](https://zeyadomran.com)
 
 **Client:** React, Next.js, Chakra-UI, Apollo Client
 
-**Server:** Express, MongoDb, Apollo Server, Typegoose, Type-GraphQL
+**Server:** Express, MongoDb, Apollo Server, Typegoose, Type-GraphQL, Docker
 
   
 ## Deployment
 
-To deploy the server
+To deploy the server, the server is deploying in a DigitalOcean droplet.
 
 ```bash
   cd server
   sh deploy.sh
 ```
-To deploy the front end, just push to the the prod branch
+To deploy the front end, just push to the the prod branch, the front end is deployed on Vercel.
   
 ## Authors
 
