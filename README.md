@@ -2,7 +2,7 @@
 ![Logo](https://zeyadomran.com/images/favicon/favicon.ico)
 
     
-# Welcome to my Personal website's repository
+# Welcome to my personal website's repository
 
 This website's purpose is to show off some of the projects that I worked on, and to allow you to get to know me!
 
