@@ -30,7 +30,7 @@ To deploy the server, the server is deploying in a DigitalOcean droplet.
   sh deploy.sh
 ```
   
-## Authors
+## Author
 
 - [@zeyadomran](https://www.github.com/zeyadomran)
 
