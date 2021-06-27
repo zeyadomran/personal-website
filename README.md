@@ -7,15 +7,23 @@ This website's purpose is to show off some of the projects that I worked on, and
 
 ## Demo
 
-You can view the production version [right here](https://zeyadomran.com)
+You can view the production version [here](https://zeyadomran.com).
   
 ## Tech Stack
 
-**Client:** React, Next.js, Tailwind CSS
+	- React
+	- Next.js
+	- Tailwind CSS
 
 ## Deployment
 
 To deploy, just push to the the prod branch.
+
+## Run Locally
+
+```bash
+yarn dev
+```
 
 ## Author
 
