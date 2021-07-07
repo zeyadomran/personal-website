@@ -4,7 +4,10 @@ import React from "react";
 export default class Document extends NextDocument {
 	render() {
 		return (
-			<Html lang="en" className="bg-black">
+			<Html
+				lang="en"
+				className="bg-blue min-h-screen overflow-y-scroll overflow-x-hidden"
+			>
 				<Head>
 					<link rel="preconnect" href="https://fonts.gstatic.com" />
 					<link
@@ -12,7 +15,7 @@ export default class Document extends NextDocument {
 						rel="stylesheet"
 					/>
 				</Head>
-				<body>
+				<body className="min-h-screen overflow-y-scroll overflow-x-hidden">
 					<Main />
 					<NextScript />
 				</body>

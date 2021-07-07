@@ -1,8 +1,11 @@
-const NavCTA: React.FC = ({ children }) => {
+import { CgArrowLongDown } from "react-icons/cg";
+
+const NavCTA: React.FC = ({ children, ...rest }) => {
 	return (
 		<li>
-			<button className="font-heading text-sm md:text-base text-white md:text-black md:hover:text-white font-bold rounded p-1 md:p-2 border-blue active:border-blue-800 border-4 bg-blue md:bg-transparent md:hover:bg-blue active:bg-blue-800 transition-all duration-200">
+			<button className="group flex items-center font-body text-base text-blue hover:text-white rounded py-2 px-4 border-blue active:border-blue-800 border-2 bg-transparent hover:bg-blue active:bg-blue-800 transition-all duration-200 ease-in-out">
 				{children}
+				<CgArrowLongDown className="text-blue group-hover:text-white transition-all duration-200 ease-in-out" />
 			</button>
 		</li>
 	);
