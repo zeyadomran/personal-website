@@ -1,7 +1,20 @@
+import React from "react";
+import HeroContent from "./HeroContent";
+import { FaChevronDown } from "react-icons/fa";
+
 const Hero: React.FC = () => {
 	return (
-		<section className="grid grid-cols-12 gap-8 mt-16  p-12 h-screen bg-white">
-			Hero
+		<section
+			id="hero"
+			className="relative flex flex-col items-center justify-center px-12 h-screen bg-white"
+		>
+			<HeroContent />
+			<div className="absolute bottom-32 flex flex-col items-center">
+				<p className="text-black text-lg font-bold font-heading mb-1">
+					Scroll Down
+				</p>
+				<FaChevronDown className="text-black w-7 h-7 motion-safe:animate-bounce" />
+			</div>
 		</section>
 	);
 };
