@@ -6,7 +6,7 @@ export default class Document extends NextDocument {
 		return (
 			<Html
 				lang="en"
-				className="bg-blue min-h-screen overflow-y-scroll overflow-x-hidden"
+				className="bg-white min-h-screen overflow-y-scroll overflow-x-hidden"
 			>
 				<Head>
 					<link rel="preconnect" href="https://fonts.gstatic.com" />
