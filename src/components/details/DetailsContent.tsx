@@ -1,16 +1,14 @@
 import React from "react";
 import { BsFillLightningFill, BsLaptop, BsPencil } from "react-icons/bs";
-import CTAButton from "../CTAButton";
 import DetailCard from "./DetailCard";
 import DetailCardContainer from "./DetailCardContainer";
 
-const HeroContent: React.FC = () => {
+const DetailsContent: React.FC = () => {
 	return (
-		<div className="flex flex-col items-center break-words w-full space-y-8">
+		<div className="flex flex-col items-center break-words w-full space-y-14">
 			<h2 className="text-center font-heading text-2xl md:text-4xl text-white font-bold">
 				A little bit about me.
 			</h2>
-			<CTAButton href="/about">More Detail</CTAButton>
 			<DetailCardContainer>
 				<DetailCard icon={<BsPencil className="w-8 h-8 text-blue-700" />}>
 					I'm studying Computer Science at the University of Calgary. I've
@@ -36,4 +34,4 @@ const HeroContent: React.FC = () => {
 	);
 };
 
-export default HeroContent;
+export default DetailsContent;

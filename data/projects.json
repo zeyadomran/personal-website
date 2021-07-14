@@ -1,0 +1,37 @@
+[
+	{
+		"name": "Personal Website",
+		"description": "I made my personal website using the latest web technologies.",
+		"year": 2021,
+		"url": "https://github.com/zeyadomran/personal-website",
+		"technologies": ["TypeScript", "Next.js", "React", "Tailwind CSS"]
+	},
+	{
+		"name": "SQuiz",
+		"description": "I made a simple online quiz game that uses authentication and track's players' highscores!",
+		"year": 2021,
+		"url": "https://github.com/zeyadomran/SQuiz",
+		"technologies": ["TypeScript", "Node.js", "Next.js", "GraphQL"]
+	},
+	{
+		"name": "Frogger",
+		"description": "I made a frogger game for the raspberry pi with a custom SNES controller driver!",
+		"year": 2021,
+		"url": "https://github.com/zeyadomran/Frogger-RPI",
+		"technologies": ["c"]
+	},
+	{
+		"name": "Zarna Bank",
+		"description": "I worked in a team of 5 to develop a simple banking application.",
+		"year": 2020,
+		"url": "https://github.com/zeyadomran/ZARNA-Bank",
+		"technologies": ["Java", "JavaFX", "CSS"]
+	},
+	{
+		"name": "Fitness Tracker",
+		"description": "I built a desktop application that works on any os that will help you achieve all your fitness goals!",
+		"year": 2019,
+		"url": "https://github.com/zeyadomran/Fitness-Tracker",
+		"technologies": ["JavaScript", "Electron.js", "HTML", "SCSS"]
+	}
+]

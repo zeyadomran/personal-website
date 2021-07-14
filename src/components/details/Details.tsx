@@ -5,9 +5,11 @@ const Details: React.FC = () => {
 	return (
 		<section
 			id="details"
-			className="flex flex-col items-center justify-center py-24 md:py-32 px-6 md:px-12 bg-black"
+			className="flex flex-col items-center justify-center py-12 px-2 bg-black"
 		>
-			<DetailsContent />
+			<div className="w-11/12 md:w-9/12 lg:w-8/12">
+				<DetailsContent />
+			</div>
 		</section>
 	);
 };

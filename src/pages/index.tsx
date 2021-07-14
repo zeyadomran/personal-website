@@ -1,20 +1,40 @@
+import { NextPage } from "next";
+import { promises as fs } from "fs";
+import path from "path";
 import React from "react";
 import Container from "../components/Container";
 import Details from "../components/details/Details";
 import Footer from "../components/footer/Footer";
 import Header from "../components/header/Header";
 import Hero from "../components/hero/Hero";
+import Projects, { Project } from "../components/projects/Projects";
 
-const Index: React.FC = () => {
+interface IndexProps {
+	data: Project[];
+}
+
+const Index: NextPage<IndexProps> = ({ data }) => {
 	return (
 		<Container>
 			<Header />
 			<Hero />
 			<Details />
-			<Hero />
+			<Projects projects={data} />
 			<Footer />
 		</Container>
 	);
 };
+
+export async function getStaticProps() {
+	const data = await fs.readFile(
+		path.join(process.cwd(), "data/projects.json"),
+		"utf8"
+	);
+	return {
+		props: {
+			data: await Promise.all(JSON.parse(data)),
+		},
+	};
+}
 
 export default Index;
