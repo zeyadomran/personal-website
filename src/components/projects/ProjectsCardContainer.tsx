@@ -1,6 +1,6 @@
 const ProjectsCardContainer: React.FC = ({ children }) => {
 	return (
-		<div className="grid grid-cols-1 md:grid-cols-3 gap-y-8 gap-x-8 w-full">
+		<div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-y-8 gap-x-8 w-full">
 			{children}
 		</div>
 	);

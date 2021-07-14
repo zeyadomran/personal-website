@@ -8,18 +8,23 @@ import Footer from "../components/footer/Footer";
 import Header from "../components/header/Header";
 import Hero from "../components/hero/Hero";
 import Projects, { Project } from "../components/projects/Projects";
+import Contact from "../components/contact/Contact";
+import Alert from "../components/Alert";
 
 interface IndexProps {
 	data: Project[];
 }
 
 const Index: NextPage<IndexProps> = ({ data }) => {
+	const [isOpen, setIsOpen] = React.useState(false);
 	return (
 		<Container>
 			<Header />
+			<Alert isOpen={isOpen} setIsOpen={() => setIsOpen(false)} />
 			<Hero />
 			<Details />
 			<Projects projects={data} />
+			<Contact setIsOpen={setIsOpen} />
 			<Footer />
 		</Container>
 	);
