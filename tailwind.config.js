@@ -11,6 +11,15 @@ module.exports = {
 				heading: ["Montserrat", "Helvetica", "sans-serif"],
 				body: ["Roboto", "Arial", "sans-serif"],
 			},
+			keyframes: {
+				fadeIn: {
+					"0%": { opacity: 0 },
+					"100%": { opacity: 1 },
+				},
+			},
+			animation: {
+				fadeIn: "fadeIn 1s ease-in-out",
+			},
 			colors: {
 				white: "#FCFAFA",
 				black: "#070707",
@@ -57,7 +66,7 @@ module.exports = {
 		},
 	},
 	variants: {
-		animation: ["responsive", "motion-safe", "motion-reduce"],
+		animation: ["motion-safe"],
 		extend: {},
 	},
 	plugins: [],

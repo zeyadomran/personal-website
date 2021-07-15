@@ -18,11 +18,11 @@
 		"description": "I made a frogger game for the raspberry pi with a custom SNES controller driver!",
 		"year": 2021,
 		"url": "https://github.com/zeyadomran/Frogger-RPI",
-		"technologies": ["c"]
+		"technologies": ["c", "Make"]
 	},
 	{
 		"name": "Zarna Bank",
-		"description": "I worked in a team of 5 to develop a simple banking application.",
+		"description": "I worked in a team of 5 to develop a simple banking application that simulates sending and receiving money and messages.",
 		"year": 2020,
 		"url": "https://github.com/zeyadomran/ZARNA-Bank",
 		"technologies": ["Java", "JavaFX", "CSS"]

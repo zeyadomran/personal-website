@@ -9,7 +9,14 @@ const Hero: React.FC = () => {
 			className="relative flex flex-col items-center justify-center px-12 h-screen bg-white"
 		>
 			<HeroContent />
-			<div className="absolute bottom-32 flex flex-col items-center">
+			<div
+				onClick={() =>
+					document
+						.getElementById("about")
+						?.scrollIntoView({ behavior: "smooth" })
+				}
+				className="absolute bottom-32 flex flex-col items-center cursor-pointer"
+			>
 				<p className="text-black text-lg font-bold font-heading mb-1">
 					Scroll Down
 				</p>

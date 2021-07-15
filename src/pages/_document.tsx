@@ -6,6 +6,7 @@ export default class Document extends NextDocument {
 		return (
 			<Html
 				lang="en"
+				style={{ scrollBehavior: "smooth" }}
 				className="bg-white min-h-screen overflow-y-scroll overflow-x-hidden"
 			>
 				<Head>
@@ -15,7 +16,10 @@ export default class Document extends NextDocument {
 						rel="stylesheet"
 					/>
 				</Head>
-				<body className="min-h-screen overflow-y-scroll overflow-x-hidden">
+				<body
+					style={{ scrollBehavior: "smooth" }}
+					className="min-h-screen overflow-y-scroll overflow-x-hidden"
+				>
 					<Main />
 					<NextScript />
 				</body>

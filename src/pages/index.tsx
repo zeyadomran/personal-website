@@ -17,10 +17,11 @@ interface IndexProps {
 
 const Index: NextPage<IndexProps> = ({ data }) => {
 	const [isOpen, setIsOpen] = React.useState(false);
+
 	return (
 		<Container>
 			<Header />
-			<Alert isOpen={isOpen} setIsOpen={() => setIsOpen(false)} />
+			<Alert isOpen={isOpen} setIsOpen={setIsOpen} />
 			<Hero />
 			<Details />
 			<Projects projects={data} />

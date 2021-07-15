@@ -1,4 +1,5 @@
 import React from "react";
+import useAnimate from "../../hooks/useAnimate";
 import Badge from "../Badge";
 import CTAButton from "../CTAButton";
 import { Project } from "./Projects";
@@ -8,23 +9,26 @@ interface ProjectCardProps {
 }
 
 const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
+	const ref = React.useRef(null);
+	useAnimate(ref, "motion-safe:animate-fadeIn");
 	return (
-		<div className="flex flex-col justify-between p-8 w-full rounded-lg bg-black text-white space-y-6">
-			<div className="flex items-center justify-between">
+		<div
+			ref={ref}
+			className="flex flex-col justify-between items-center p-6 w-full rounded-lg bg-black text-white"
+		>
+			<div className="flex items-center justify-between w-full mb-1">
 				<h3 className="font-heading text-3xl text-white font-bold">
 					{project.name}
 				</h3>
 				<Badge>{project.year}</Badge>
 			</div>
-			<p className="text-xl text-white text-left">{project.description}</p>
-			<div className="flex flex-col items-center space-y-4">
-				<CTAButton href={project.url}>View Source Code</CTAButton>
-				<div className="flex flex-row items-center justify-start flex-wrap">
-					{project.technologies.map((name, index) => (
-						<Badge key={index}>{name}</Badge>
-					))}
-				</div>
+			<div className="flex flex-row items-left justify-start flex-wrap w-full mb-2">
+				{project.technologies.map((name, index) => (
+					<Badge key={index}>{name}</Badge>
+				))}
 			</div>
+			<p className="text-xl text-white text-left mb-2">{project.description}</p>
+			<CTAButton href={project.url}>View Source Code</CTAButton>{" "}
 		</div>
 	);
 };
