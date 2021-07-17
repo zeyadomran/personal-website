@@ -1,6 +1,5 @@
 import React from "react";
-import CTAButton from "../CTAButton";
-import Link from "next/link";
+import { Link } from "react-scroll";
 import useAnimate from "../../hooks/useAnimate";
 
 const HeroContent: React.FC = () => {
@@ -17,26 +16,26 @@ const HeroContent: React.FC = () => {
 			<h2 className="text-center font-body text-md md:text-xl mb-4 text-gray-500">
 				A Full Stack Developer & Computer Science Student.
 			</h2>
-			<button
-				onClick={() =>
-					document
-						.getElementById("contact")
-						?.scrollIntoView({ behavior: "smooth" })
-				}
-				className="font-body text-xl text-white rounded py-2 px-4 border-blue hover:border-blue-800 border-2 bg-blue hover:bg-blue-800 transition-all duration-200 ease-in-out"
+			<Link
+				to="contact"
+				smooth="easeInOutQuart"
+				duration={100}
+				ignoreCancelEvents={false}
 			>
-				Contact Me
-			</button>
-			<button
-				onClick={() =>
-					document
-						.getElementById("about")
-						?.scrollIntoView({ behavior: "smooth" })
-				}
-				className="font-body text-blue-800 hover:text-blue text-base underline mt-2 transition-all duration-200 ease-in-out"
+				<button className="font-body text-xl text-white rounded py-2 px-4 border-blue hover:border-blue-800 border-2 bg-blue hover:bg-blue-800 transition-all duration-200 ease-in-out">
+					Contact Me
+				</button>
+			</Link>
+			<Link
+				to="about"
+				smooth="easeInOutQuart"
+				duration={100}
+				ignoreCancelEvents={false}
 			>
-				About Me
-			</button>
+				<button className="font-body text-blue-800 hover:text-blue text-base underline mt-2 transition-all duration-200 ease-in-out">
+					About Me
+				</button>
+			</Link>
 		</div>
 	);
 };

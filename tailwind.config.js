@@ -13,8 +13,14 @@ module.exports = {
 			},
 			keyframes: {
 				fadeIn: {
-					"0%": { opacity: 0 },
-					"100%": { opacity: 1 },
+					"0%": {
+						opacity: 0,
+						transform: "translate3d(0,40px,0)",
+					},
+					"100%": {
+						opacity: 1,
+						transform: "translate3d(0,0,0)",
+					},
 				},
 			},
 			animation: {

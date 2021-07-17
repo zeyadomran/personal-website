@@ -1,3 +1,6 @@
+import React from "react";
+import { Link } from "react-scroll";
+
 interface NavLinkProps {
 	href: string;
 	children: React.ReactNode;
@@ -6,13 +9,14 @@ interface NavLinkProps {
 const NavLink: React.FC<NavLinkProps> = ({ children, href }) => {
 	return (
 		<li className="font-body text-base text-black hover:text-blue cursor-pointer">
-			<button
-				onClick={() =>
-					document.getElementById(href)?.scrollIntoView({ behavior: "smooth" })
-				}
+			<Link
+				to={href}
+				smooth="easeInOutQuart"
+				duration={100}
+				ignoreCancelEvents={false}
 			>
 				{children}
-			</button>
+			</Link>
 		</li>
 	);
 };

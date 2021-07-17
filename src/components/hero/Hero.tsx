@@ -1,6 +1,7 @@
 import React from "react";
-import HeroContent from "./HeroContent";
 import { FaChevronDown } from "react-icons/fa";
+import { Link } from "react-scroll";
+import HeroContent from "./HeroContent";
 
 const Hero: React.FC = () => {
 	return (
@@ -9,18 +10,19 @@ const Hero: React.FC = () => {
 			className="relative flex flex-col items-center justify-center px-12 h-screen bg-white"
 		>
 			<HeroContent />
-			<div
-				onClick={() =>
-					document
-						.getElementById("about")
-						?.scrollIntoView({ behavior: "smooth" })
-				}
-				className="absolute bottom-32 flex flex-col items-center cursor-pointer"
-			>
-				<p className="text-black text-lg font-bold font-heading mb-1">
-					Scroll Down
-				</p>
-				<FaChevronDown className="text-black w-7 h-7 motion-safe:animate-bounce" />
+			<div className="absolute bottom-32 flex flex-col items-center cursor-pointer">
+				<Link
+					className="flex flex-col items-center"
+					to="about"
+					smooth="easeInOutQuart"
+					duration={100}
+					ignoreCancelEvents={false}
+				>
+					<p className="text-black text-lg font-bold font-heading mb-1">
+						Scroll Down
+					</p>
+					<FaChevronDown className="text-black w-7 h-7 motion-safe:animate-bounce" />
+				</Link>
 			</div>
 		</section>
 	);
