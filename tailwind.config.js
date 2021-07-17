@@ -26,6 +26,9 @@ module.exports = {
 			animation: {
 				fadeIn: "fadeIn 1s ease-in-out",
 			},
+			transitionProperty: {
+				height: "height",
+			},
 			colors: {
 				white: "#FCFAFA",
 				black: "#070707",

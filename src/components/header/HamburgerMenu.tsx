@@ -8,7 +8,7 @@ interface HamburgerMenuProps {
 
 const HamburgerMenu: React.FC<HamburgerMenuProps> = ({ isOpen, setIsOpen }) => {
 	return (
-		<div className="block md:hidden">
+		<div className="block md:hidden z-50">
 			<Hamburger
 				color="#070707"
 				size={32}
