@@ -1,5 +1,5 @@
 import React from "react";
-import { AiFillCheckCircle } from "react-icons/Ai";
+import { AiFillCheckCircle } from "react-icons/ai";
 
 interface AlertProps {
 	isOpen: boolean;
