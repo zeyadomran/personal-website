@@ -10,7 +10,7 @@ const Logo: React.FC = () => {
 			duration={100}
 			ignoreCancelEvents={false}
 		>
-			<div className="flex items-center w-4 h-10 z-10 mr-2">
+			<div className="w-4 h-10 z-10 mr-2 text-blue">
 				<LogoSVG />
 			</div>{" "}
 		</Link>
