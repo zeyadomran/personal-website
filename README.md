@@ -1,5 +1,5 @@
 
-![Logo](https://zeyadomran.com/images/favicon/favicon.ico)
+![Logo](https://zeyadomran.com/favicon.ico)
 
 # Welcome to my personal website's repository
 
