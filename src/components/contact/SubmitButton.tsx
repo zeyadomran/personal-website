@@ -1,5 +1,5 @@
 import React from "react";
-import { AiOutlineLoading3Quarters } from "react-icons/Ai";
+import { AiOutlineLoading3Quarters } from "react-icons/ai";
 interface SubmitButtonProps {
 	isSubmitting: boolean;
 }

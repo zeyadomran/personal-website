@@ -1,6 +1,6 @@
 import React from "react";
 import { FaInstagram, FaGithub, FaLinkedin } from "react-icons/fa";
-import { MdEmail } from "react-icons/Md";
+import { MdEmail } from "react-icons/md";
 import SocialButton from "../Social/SocialButton";
 
 const SocialFooter: React.FC = () => {

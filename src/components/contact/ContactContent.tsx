@@ -1,6 +1,6 @@
 import { Form, Formik, ErrorMessage } from "formik";
 import React from "react";
-import { MdEmail } from "react-icons/Md";
+import { MdEmail } from "react-icons/md";
 import useAnimate from "../../hooks/useAnimate";
 import InputArea from "./InputArea";
 import InputField from "./InputField";
