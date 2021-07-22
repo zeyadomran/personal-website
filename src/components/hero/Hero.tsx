@@ -7,9 +7,10 @@ const Hero: React.FC = () => {
 	return (
 		<section
 			id="hero"
-			className="relative flex flex-col items-center justify-center px-12 h-screen bg-white"
+			className="relative flex flex-col items-center justify-center px-12 h-screen w-screen"
 		>
 			<HeroContent />
+			<div className="absolute top-0 w-full h-screen bg-hero-pattern bg-cover bg-center bg-no-repeat filter blur-sm" />
 			<div className="absolute bottom-32 flex flex-col items-center cursor-pointer">
 				<Link
 					className="flex flex-col items-center"
@@ -18,7 +19,7 @@ const Hero: React.FC = () => {
 					duration={100}
 					ignoreCancelEvents={false}
 				>
-					<p className="text-black text-lg font-bold font-heading mb-1">
+					<p className="text-black text-lg font-medium font-heading mb-1">
 						Scroll Down
 					</p>
 					<FaChevronDown className="text-black w-7 h-7 motion-safe:animate-bounce" />

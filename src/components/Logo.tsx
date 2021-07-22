@@ -10,8 +10,11 @@ const Logo: React.FC = () => {
 			duration={100}
 			ignoreCancelEvents={false}
 		>
-			<div className="w-10 md:w-12 h-10 md:h-12 cursor-pointer z-10">
-				<LogoSVG />
+			<div className="flex items-center text-xl md:text-2xl font-bold font-heading cursor-pointer hover:text-blue transition duration-300 ease-in-out">
+				<div className="flex items-center w-4 h-10 z-10 mr-2">
+					<LogoSVG />
+				</div>{" "}
+				Zeyad
 			</div>
 		</Link>
 	);

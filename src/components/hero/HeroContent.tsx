@@ -8,13 +8,13 @@ const HeroContent: React.FC = () => {
 	return (
 		<div
 			ref={ref}
-			className="flex flex-col items-center break-words w-full md:w-3/4"
+			className="flex flex-col items-center break-words w-full z-10"
 		>
-			<h1 className="text-center font-heading text-4xl md:text-7xl mb-2 text-black font-bold">
-				Hi, I'm Zeyad Omran
+			<h1 className="text-center font-heading text-4xl md:text-7xl mb-1 md:mb-2 text-black font-bold">
+				Zeyad Omran
 			</h1>
-			<h2 className="text-center font-body text-md md:text-xl mb-4 text-gray-500">
-				A Full Stack Developer & Computer Science Student.
+			<h2 className="text-center font-body font-medium text-md md:text-xl mb-4 md:mb-8 text-gray-700">
+				Software Engineer & Computer Science Student
 			</h2>
 			<Link
 				to="contact"

@@ -8,7 +8,7 @@ interface NavLinkProps {
 
 const NavLink: React.FC<NavLinkProps> = ({ children, href }) => {
 	return (
-		<li className="font-body text-lg font-bold text-black hover:text-blue cursor-pointer">
+		<li className="font-body text-base font-medium text-black hover:text-blue cursor-pointer">
 			<Link
 				to={href}
 				smooth="easeInOutQuart"

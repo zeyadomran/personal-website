@@ -12,9 +12,10 @@ export default class Document extends NextDocument {
 				<Head>
 					<link rel="preconnect" href="https://fonts.gstatic.com" />
 					<link
-						href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:ital,wght@0,400;0,500;1,400&display=swap"
+						href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;700&display=swap"
 						rel="stylesheet"
 					/>
+					<link rel="icon" type="image/x-icon" href="/favicon.ico" />
 				</Head>
 				<body
 					style={{ scrollBehavior: "smooth" }}

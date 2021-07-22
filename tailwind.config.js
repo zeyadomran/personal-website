@@ -8,8 +8,8 @@ module.exports = {
 	theme: {
 		extend: {
 			fontFamily: {
-				heading: ["Montserrat", "Helvetica", "sans-serif"],
-				body: ["Roboto", "Arial", "sans-serif"],
+				heading: ["IBM Plex Sans", "Helvetica", "sans-serif"],
+				body: ["IBM Plex Sans", "Arial", "sans-serif"],
 			},
 			keyframes: {
 				fadeIn: {
@@ -28,6 +28,16 @@ module.exports = {
 			},
 			transitionProperty: {
 				height: "height",
+			},
+			backgroundImage: (theme) => ({
+				"hero-pattern": "url('/pattern.svg')",
+			}),
+			blur: {
+				xs: "1px",
+			},
+			backgroundSize: {
+				"50%": "50%",
+				16: "4rem",
 			},
 			colors: {
 				white: "#FCFAFA",
