@@ -20,7 +20,12 @@ const Meta: React.FC = () => (
 		/>
 		<meta name="twitter:card" content="Logo_Cover.png" />
 		<meta property="og:url" content="https://zeyadomran.com/" />
-		<meta property="og:site_name" content="Zeyad Omran" />
+		<meta property="og:image" content="https://zeyadomran.com/Logo_Cover.png" />
+		<meta property="og:image:type" content="image/png" />
+		<meta property="og:image:width" content="2000" />
+		<meta property="og:image:height" content="1500" />
+		<meta property="og:image:alt" content="Zeyad Omran Logo" />
+		<meta property="og:site_name" content="Zeyad Omran :: Software Engineer" />
 		<meta name="twitter:image:alt" content="Zeyad Omran Logo" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<link rel="canonical" href="https://zeyadomran.com/" />
