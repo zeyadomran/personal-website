@@ -4,7 +4,7 @@ const NavCTA: React.FC = ({ children }) => {
 		<li>
 			<button className="">
 				<a
-					href="http://localhost:3000/Zeyad_Omran_CV.pdf"
+					href="https://zeyadomran.com/Zeyad_Omran_CV.pdf"
 					target="_blank"
 					className="group flex items-center font-body text-base font-medium text-blue hover:text-white rounded py-2 px-4 border-blue active:border-blue-800 border-2 bg-transparent hover:bg-blue active:bg-blue-800 transition-all duration-300 ease-in-out"
 				>
