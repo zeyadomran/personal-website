@@ -14,7 +14,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
 	return (
 		<div
 			ref={ref}
-			className="flex flex-col justify-between items-center p-6 w-full rounded-lg bg-dark-blue text-white hover:-translate-y-1 transition duration-300 ease-in-out"
+			className="flex flex-col justify-between items-center p-4 w-full rounded-lg bg-dark-blue text-white hover:-translate-y-1 transition duration-300 ease-in-out"
 		>
 			<div className="flex items-center justify-between w-full mb-1">
 				<h3 className="font-heading text-3xl text-white font-bold">
@@ -27,7 +27,9 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
 					<Badge key={index}>{name}</Badge>
 				))}
 			</div>
-			<p className="text-xl text-white text-left mb-2">{project.description}</p>
+			<p className="text-xl text-white text-left font-body mb-2">
+				{project.description}
+			</p>
 			<CTAButton href={project.url}>View Source Code</CTAButton>{" "}
 		</div>
 	);

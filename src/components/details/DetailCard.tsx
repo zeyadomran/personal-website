@@ -12,11 +12,11 @@ const DetailCard: React.FC<DetailCardProps> = ({ children, icon }) => {
 	return (
 		<div
 			ref={ref}
-			className="flex flex-col items-center p-6 w-full rounded-lg bg-white space-y-4"
+			className="flex flex-col items-center p-4 w-full rounded-lg bg-white space-y-4 hover:-translate-y-1 transition duration-300 ease-in-out"
 		>
 			{icon}
 			<div>
-				<p className="text-left text-black text-xl">{children}</p>
+				<p className="text-center text-black text-lg font-body">{children}</p>
 			</div>
 		</div>
 	);
