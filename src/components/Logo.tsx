@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-scroll";
-import LogoSVG from "../resources/Logo.svg";
+import LogoSVG from "../resources/logo.svg";
 
 const Logo: React.FC = () => {
 	return (
