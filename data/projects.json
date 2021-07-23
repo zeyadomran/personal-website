@@ -1,7 +1,7 @@
 [
 	{
 		"name": "Personal Website",
-		"description": "I made my personal website using the latest web technologies.",
+		"description": "I made my personal website to let others learn more about me using the latest web technologies.",
 		"year": 2021,
 		"url": "https://github.com/zeyadomran/personal-website",
 		"technologies": ["TypeScript", "Next.js", "React", "Tailwind CSS"]
@@ -12,6 +12,13 @@
 		"year": 2021,
 		"url": "https://github.com/zeyadomran/SQuiz",
 		"technologies": ["TypeScript", "Node.js", "Next.js", "GraphQL"]
+	},
+	{
+		"name": "Self Checkout Station Software",
+		"description": "I worked with a group of 11 to build a GUI that simulates a user interacting with a Self Checkout Station.",
+		"year": 2021,
+		"url": "https://github.com/zeyadomran/Self-Checkout-Station-Simulator",
+		"technologies": ["Java", "Java Swing"]
 	},
 	{
 		"name": "Frogger",
