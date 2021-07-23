@@ -17,14 +17,14 @@ const Meta: React.FC = () => (
 		<meta property="og:title" content="Zeyad Omran" />
 		<meta
 			property="og:description"
-			content="I am a 3rd year student at the University of Calgary and a passionate full stack developer."
+			content="I'm a 3rd year Computer Science student at the University of Calgary. Throughout my time there I've learnt a lot of the fundamentals that would help me succeed in my professional career and I'm actively applying them on my projects! I've also learnt how to work with others effectively and succeed while being out of my comfort zone."
 		/>
 
 		<meta property="og:url" content="https://zeyadomran.com/" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<link rel="canonical" href="https://zeyadomran.com/" />
 
-		<meta property="og:image" content="https://zeyadomran.com/Logo_Cover.png" />
+		<meta property="og:image" content="Logo_Cover.png" />
 		<meta property="og:image:type" content="image/png" />
 		<meta property="og:image:width" content="2500" />
 		<meta property="og:image:height" content="1500" />
