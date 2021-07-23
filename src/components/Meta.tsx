@@ -24,11 +24,13 @@ const Meta: React.FC = () => (
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<link rel="canonical" href="https://zeyadomran.com/" />
 
-		<meta property="og:image" content="Logo_Cover.png" />
+		<meta property="og:image" content="https://zeyadomran.com/Logo_Cover.png" />
+		<meta
+			property="og:image:secure_url"
+			content="https://zeyadomran.com/Logo_Cover.png"
+		/>
 		<meta property="og:image:type" content="image/png" />
-		<meta property="og:image:width" content="2500" />
-		<meta property="og:image:height" content="1500" />
-		<meta property="og:image:alt" content="Zeyad Omran Logo" />
+		<meta property="og:image:alt" content="Zeyad Omran Cover Image" />
 		<meta property="og:site_name" content="Zeyad Omran :: Software Engineer" />
 
 		<meta name="twitter:card" content="Logo_Cover.png" />
