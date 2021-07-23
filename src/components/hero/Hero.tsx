@@ -10,7 +10,6 @@ const Hero: React.FC = () => {
 			className="relative flex flex-col items-center justify-center px-12 h-screen w-screen"
 		>
 			<HeroContent />
-			<div className="absolute top-0 w-full h-screen bg-hero-pattern bg-cover bg-center bg-no-repeat filter blur-sm" />
 			<div className="absolute bottom-32 flex flex-col items-center cursor-pointer">
 				<Link
 					className="flex flex-col items-center"

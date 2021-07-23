@@ -8,7 +8,7 @@ module.exports = {
 	theme: {
 		extend: {
 			fontFamily: {
-				heading: ["IBM Plex Sans", "Helvetica", "sans-serif"],
+				heading: ["Poppins", "Helvetica", "sans-serif"],
 				body: ["IBM Plex Sans", "Arial", "sans-serif"],
 			},
 			keyframes: {
@@ -42,6 +42,7 @@ module.exports = {
 			colors: {
 				white: "#FCFAFA",
 				black: "#070707",
+				"dark-blue": "#01001F",
 				blue: {
 					DEFAULT: "#082DFF",
 					50: "#EDF0FF",

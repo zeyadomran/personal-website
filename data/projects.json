@@ -18,7 +18,7 @@
 		"description": "I made a frogger game for the raspberry pi with a custom SNES controller driver!",
 		"year": 2021,
 		"url": "https://github.com/zeyadomran/Frogger-RPI",
-		"technologies": ["c", "Make"]
+		"technologies": ["C", "Makefile"]
 	},
 	{
 		"name": "Zarna Bank",

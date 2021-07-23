@@ -14,7 +14,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
 	return (
 		<div
 			ref={ref}
-			className="flex flex-col justify-between items-center p-6 w-full rounded-lg bg-black text-white"
+			className="flex flex-col justify-between items-center p-6 w-full rounded-lg bg-dark-blue text-white hover:-translate-y-1 transition duration-300 ease-in-out"
 		>
 			<div className="flex items-center justify-between w-full mb-1">
 				<h3 className="font-heading text-3xl text-white font-bold">

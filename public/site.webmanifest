@@ -1,6 +1,6 @@
 {
-    "name": "",
-    "short_name": "",
+    "name": "Zeyad Omran",
+    "short_name": "Zeyad Omran",
     "icons": [
         {
             "src": "/android-chrome-192x192.png",
@@ -13,7 +13,7 @@
             "type": "image/png"
         }
     ],
-    "theme_color": "#fcfafa",
-    "background_color": "#fcfafa",
+    "theme_color": "#01001f",
+    "background_color": "#01001f",
     "display": "standalone"
 }

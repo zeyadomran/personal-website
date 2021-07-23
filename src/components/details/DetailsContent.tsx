@@ -7,7 +7,7 @@ const DetailsContent: React.FC = () => {
 	return (
 		<div className="flex flex-col items-center break-words w-full space-y-14">
 			<h2 className="text-center font-heading text-2xl md:text-4xl text-white font-bold">
-				A little bit about me.
+				A little bit about me
 			</h2>
 			<DetailCardContainer>
 				<DetailCard icon={<BsPencil className="w-10 h-10 text-blue-700" />}>

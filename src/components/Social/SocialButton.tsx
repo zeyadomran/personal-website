@@ -13,7 +13,7 @@ const SocialButton: React.FC<SocialButtonProps> = ({
 }) => {
 	return (
 		<a
-			className="inline-flex items-center justify-center w-10 h-10 hover:text-blue text-white rounded-full cursor-pointer transition-all duration-300 ease-in-out"
+			className="inline-flex items-center justify-center w-10 h-10 hover:text-blue hover:-translate-y-1 text-white rounded-full cursor-pointer transition duration-300 ease-in-out"
 			target={"_blank"}
 			href={href}
 		>
