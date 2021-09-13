@@ -27,7 +27,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
 					<Badge key={index}>{name}</Badge>
 				))}
 			</div>
-			<p className="text-xl text-white text-left font-body mb-1">
+			<p className="text-lg text-white text-left font-body mb-1">
 				{project.description}
 			</p>
 			<CTAButton href={project.url}>View Source Code</CTAButton>

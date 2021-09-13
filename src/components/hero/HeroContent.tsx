@@ -1,15 +1,9 @@
 import React from "react";
 import { Link } from "react-scroll";
-import useAnimate from "../../hooks/useAnimate";
 
 const HeroContent: React.FC = () => {
-	const ref = React.useRef(null);
-	useAnimate(ref, "motion-safe:animate-fadeIn");
 	return (
-		<div
-			ref={ref}
-			className="flex flex-col items-center break-words w-full z-10"
-		>
+		<div className="flex flex-col items-center break-words w-full z-10 motion-safe:animate-fadeIn">
 			<h1 className="text-center font-heading text-4xl md:text-7xl mb-1 md:mb-2 text-black font-bold">
 				Zeyad Omran
 			</h1>

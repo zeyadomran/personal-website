@@ -17,7 +17,7 @@ const Meta: React.FC = () => (
 		<meta property="og:title" content="Zeyad Omran" />
 		<meta
 			property="og:description"
-			content="I'm a 3rd year Computer Science student at the University of Calgary. Throughout my time there I've learnt a lot of the fundamentals that would help me succeed in my professional career and I'm actively applying them on my projects! I've also learnt how to work with others effectively and succeed while being out of my comfort zone."
+			content="A 3rd year computer science undergraduate student with over 5 years of programming experience with various technologies. A passionate developer & skilled leader with experience in leading small & medium sized teams from the start of a project to its completion. Proficient in multiple programming languages and familiar with various full stack technologies that aid me in building complex web applications and mentor other developers that are looking to learn new things."
 		/>
 
 		<meta property="og:url" content="https://zeyadomran.com/" />
